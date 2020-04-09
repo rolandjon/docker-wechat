@@ -43,7 +43,7 @@ services:
       - XMODIFIERS=@im=fcitx
       - GTK_IM_MODULE=fcitx
       - AUDIO_GID=29 # 可选 默认29（ubuntu 18.04） 主机audio gid 解决声音设备访问权限问题
-      - GID=999 # 可选 默认999 主机当前用户 gid 解决挂载目录访问权限问题
+      - GID=1000 # 可选 默认1000 主机当前用户 gid 解决挂载目录访问权限问题
       - UID=1000 # 可选 默认1000 主机当前用户 uid 解决挂载目录访问权限问题
 ```
 

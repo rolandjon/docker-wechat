@@ -13,13 +13,13 @@ install(){
   if ! [ -x ~/.local/bin/wechat.sh ]; then
     echo 'Install this script to ~/.local/bin/wechat.sh' >&2
     #cp $0 ~/.local/bin/wechat.sh
-    curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/ygcaicn/ubuntu_qq/master/wechat.sh \
+    curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/rolandjon/docker-wechat/master/wechat.sh \
     -o ~/.local/bin/wechat.sh
     sed -i -r -e 's/^\s*remove.*install$/start/g' ~/.local/bin/wechat.sh
     chmod +x ~/.local/bin/wechat.sh
     ln -i ~/.local/bin/wechat.sh ~/.local/bin/wechat
     WECHAT_P=/home/$(whoami)/.local/bin/wechat.sh
-    curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/ygcaicn/ubuntu_qq/master/wechat.png \
+    curl -L -H "Cache-Control: no-cache" https://raw.githubusercontent.com/rolandjon/docker-wechat/master/wechat.png \
     -o ~/.local/share/icons/hicolor/256x256/apps/WINE_WECHAT.png
     cat <<-EOF > /home/$(whoami)/.local/share/applications/Wechat.desktop
 [Desktop Entry]

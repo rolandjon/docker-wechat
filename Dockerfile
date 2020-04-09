@@ -14,7 +14,7 @@ RUN echo 'deb https://mirrors.aliyun.com/deepin stable main non-free contrib' > 
 ENV APP=WeChat \
     AUDIO_GID=29 \
     VIDEO_GID=44 \
-    GID=999 \
+    GID=1000 \
     UID=1000
 
 RUN groupadd -o -g $GID wechat && \

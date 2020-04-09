@@ -12,9 +12,9 @@ RUN echo 'deb https://mirrors.aliyun.com/deepin stable main non-free contrib' > 
     find /usr/share/man -type f -delete
 
 ENV APP=WeChat \
-    AUDIO_GID=63 \
-    VIDEO_GID=39 \
-    GID=1000 \
+    AUDIO_GID=29 \
+    VIDEO_GID=44 \
+    GID=999 \
     UID=1000
 
 RUN groupadd -o -g $GID wechat && \

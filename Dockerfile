@@ -21,9 +21,9 @@ RUN groupadd -o -g $GID wechat && \
     groupmod -o -g $AUDIO_GID audio && \
     groupmod -o -g $VIDEO_GID video && \
     useradd -d "/home/wechat" -m -o -u $UID -g wechat -G audio,video wechat && \
-    mkdir -p /home/software/Tencent/WeChatFiles && \
-    chown -R wechat:wechat /home/software/Tencent/WeChatFiles && \
-    ln -s "/home/software/Tencent/WeChatFiles" "/home/software/Tencent/WeChat Files" && \
+    mkdir /WeChatFiles && \
+    chown -R wechat:wechat /WeChatFiles && \
+    ln -s "/WeChatFiles" "/home/wechat/WeChat Files" && \
     sed -i 's/WeChat.exe" &/WeChat.exe"/g' "/opt/deepinwine/tools/run.sh"
 
 VOLUME ["/WeChatFiles"]
